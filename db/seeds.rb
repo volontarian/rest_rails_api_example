@@ -1,0 +1,1 @@
+Feed.create title: 'Ruby Quicktips', url: 'http://rubyquicktips.com/rss'

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @article.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= raw @article.description %>
+</p>
+
+<p>
+  <b>Published at:</b>
+  <%= @article.published_at.strftime('%d.%m.%Y %H:%M:%S') %>
+</p>
+
+<p>
+  <b>Categories:</b>
+  <%= @article.categories.map(&:title).join(', ') %>
+</p>
+
+<%= link_to 'Back', articles_path %>
