@@ -3,16 +3,6 @@ require 'spec_helper'
 describe Article do
   subject { Factory(:article) }
 
-  describe '#add_category' do
-    it 'assures that categories are unique by title' do
-      Factory(:category, title: 'Category 1')
-      
-      subject.add_category('Category 1')
-      
-      Category.count.should == 1
-    end
-  end
-
   describe '#set_categories_by_names' do
     it 'assures that categories are unique by title' do
       Factory(:category, title: 'Category 1')
