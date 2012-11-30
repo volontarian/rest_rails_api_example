@@ -1,4 +1,7 @@
-class ApiController < ApplicationController
+class ApiController < ActionController::API
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
+  include ActionController::MimeResponds
+  
   http_basic_authenticate_with name: 'root', password: 'secret'
   
   rescue_from Exception,                      with: :render_exception
